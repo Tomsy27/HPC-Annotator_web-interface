@@ -3,12 +3,45 @@
     <head> 
         <meta charset="utf-8"> 
         <title> HPC-Annotator </title>
-        <!-- insert your code here-->
+        
     </head>
     <body>
 
-        <!-- inserct your code here-->
+        <div class="titolo" style="text-align: center;">
+            <h1>HPC-Annotator</h1>
+            <h2 id="sottotitolo">Generative Interface</h2>
+        </div>
 
+        <div class="descrizione">
+            <p style="text-align: center;">The aim of the project is to create a user interface that simplifies the configuration of HPC-Annotator software, which is a parallelization software for the main annotation software such as BLAST and Diamond, among others. 
+                The interface should allow the user to customize the software settings in order to generate a software package with the desired specifications. 
+                Once the software package is created, the user will be able to download it in TAR format and upload it onto the machine where the annotation will take place.</p>
+        </div>
+
+        <form method="post">
+
+            <div class="User_Setting" style="border: 2px solid black;">
+
+                <p>Select the workload manager</p>
+                <input type="radio" id="Slurm" value="Slurm">
+                <label for="Slurm">Slurm</label>
+                <input type="radio" id="HTCondor" value="HTCondor">
+                <label for="Slurm">HTCondor</label>
+                <input type="radio" id="None" value="None">
+                <label for="Slurm">None</label><br><br><br>
+
+                <span style="border: 2px solid black">Slurm configuration settings</span>
+
+            </div>
+
+            <div class="Software_Setting">
+
+            </div>
+
+
+        </form>
+
+    
     </body>
 
     <footer>
