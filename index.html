@@ -3,6 +3,27 @@
     <head> 
         <meta charset="utf-8"> 
         <title> HPC-Annotator </title>
+
+        <style>
+                .User_Setting{
+                    margin: 20px;
+                }
+
+                .SWM{
+                    padding-left: 10px;
+                }
+
+                .Sconf{
+                    margin-left: 50px;
+                    margin-right: 50px;
+                    margin-bottom: 50px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+
+        </style>
         
     </head>
     <body>
@@ -21,17 +42,35 @@
         <form method="post">
 
             <div class="User_Setting" style="border: 2px solid black;">
-
-                <p>Select the workload manager</p>
-                <input type="radio" id="Slurm" value="Slurm">
-                <label for="Slurm">Slurm</label>
-                <input type="radio" id="HTCondor" value="HTCondor">
-                <label for="Slurm">HTCondor</label>
-                <input type="radio" id="None" value="None">
-                <label for="Slurm">None</label><br><br><br>
+                <div class="SWM">
+                    <p>Select the workload manager</p>
+                    <input type="radio" id="Slurm" value="Slurm" name="workload">
+                    <label for="Slurm">Slurm</label>
+                    <input type="radio" id="HTCondor" value="HTCondor" name="workload">
+                    <label for="Slurm">HTCondor</label>
+                    <input type="radio" id="None" value="None" name="workload">
+                    <label for="Slurm">None</label><br><br><br>
+                </div>
 
                 <div class="Sconf" style="border: 2px solid black;">
+                <p id="SCS">Slurm configuration settings</p>
                     
+                <label for="Aname">Account name: </label>
+                <input type="text" name="Aname" id="Aname">
+                <label for="Spart">Serial partition: </label>
+                <input type="text" name="Spart" id="Spart">
+                <label for="Part">Parallel partition: </label>
+                <input type="text" name="Part" id="Part">
+                <br>
+
+                <label for="Nproces">Number of processes: </label>
+                <input type="number" name="Nproces" id="Nproces" style="width: 40px;">
+                <label for="Nthread">Number of threads: </label>
+                <input type="number" name="Nthread" id="Nthread" style="width: 40px;">
+                <label for="Time">Wall-time(hours): </label>
+                <input type="number" name="Time" id="Time" style="width: 40px;">
+                <label for="Mproces">Memory per process: </label>
+                <input type="number" name="Mproces" id="Mproces" style="width: 40px;">
 
 
                 </div>
